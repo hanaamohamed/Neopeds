@@ -3,6 +3,7 @@ package movieapplication.activity.com.designtesttwo.Activities;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 
@@ -29,6 +30,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import movieapplication.activity.com.designtesttwo.R;
 
 
@@ -75,24 +77,25 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button mSignInGmail = (Button) findViewById(R.id.email_sign_in_f);
+        CircleImageView  mSignInGmail = (CircleImageView) findViewById(R.id.email_sign_in_f);
         mSignInGmail.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 attemptLogin();
             }
         });
-        Button mSignInFb = (Button) findViewById(R.id.email_sign_in_f);
+        CircleImageView mSignInFb = (CircleImageView) findViewById(R.id.email_sign_in_f);
         mSignInFb.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 attemptLogin();
             }
         });
-        Button mSignUp = (Button) findViewById(R.id.sign_up);
+        CircleImageView mSignUp = (CircleImageView) findViewById(R.id.sign_up);
         mSignUp.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Signup_Ac.class));
 
             }
         });

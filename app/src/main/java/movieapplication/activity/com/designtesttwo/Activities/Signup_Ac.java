@@ -1,42 +1,56 @@
 package movieapplication.activity.com.designtesttwo.Activities;
 
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
+import android.app.Dialog;
+import android.app.TimePickerDialog;
 import android.net.Uri;
-import android.os.Build;
-import android.os.Bundle;
-import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 import movieapplication.activity.com.designtesttwo.Fragments.TimerPickerDialog;
 import movieapplication.activity.com.designtesttwo.R;
 
-public class AddCourse_Ac extends AppCompatActivity implements TimerPickerDialog.OnFragmentInteractionListener {
+/**
+ * An example full-screen activity that shows and hides the system UI (i.e.
+ * status bar and navigation/system bar) with user interaction.
+ */
+public class Signup_Ac extends AppCompatActivity implements TimerPickerDialog.OnFragmentInteractionListener {
+    /**
+     * Whether or not the system UI should be auto-hidden after
+     * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
+     */
+    private static final boolean AUTO_HIDE = true;
 
-    EditText startAt, end;
-    boolean startClicked;
-    boolean endClicked;
+    /**
+     * If {@link #AUTO_HIDE} is set, the number of milliseconds to wait after
+     * user interaction before hiding the system UI.
+     */
+    private static final int AUTO_HIDE_DELAY_MILLIS = 3000;
+
+    /**
+     * Some older devices needs a small delay between UI widget updates
+     * and a change of the status and navigation bar.
+     */
     private static final int UI_ANIMATION_DELAY = 300;
-    private View mContentView;
-    private boolean mVisible;
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    private View mContentView;
+    private View mControlsView;
+    private boolean mVisible;
+    EditText mDateOfBirth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_course_);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_white_36dp);
+
+        setContentView(R.layout.activity_signup_);
+
         mVisible = true;
+        mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
 
 
@@ -47,53 +61,40 @@ public class AddCourse_Ac extends AppCompatActivity implements TimerPickerDialog
                 toggle();
             }
         });
-        startAt = (EditText) findViewById(R.id.courseDateStart);
-        end = (EditText) findViewById(R.id.courseEnd);
-        startAt.setOnClickListener(new View.OnClickListener() {
+        mDateOfBirth = (EditText) findViewById(R.id.date_of_birth);
+        mDateOfBirth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final TimerPickerDialog timer = new TimerPickerDialog();
                 timer.show(getFragmentManager(), "datePicker");
-                startClicked = true;
-                endClicked = false;
             }
         });
-        end.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final TimerPickerDialog timer = new TimerPickerDialog();
-                timer.show(getFragmentManager(), "datePicker");
 
-                endClicked = true;
-                startClicked = false;
+       findViewById(R.id.create).setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
 
-            }
-        });
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+           }
+       });
+
     }
 
     @Override
-    public void onFragmentInteraction(Uri uri) {
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
 
+        // Trigger the initial hide() shortly after the activity has been
+        // created, to briefly hint to the user that UI controls
+        // are available.
+        delayedHide(100);
     }
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
-    @Override
-    public void onDatePicker(int year, int monthOfYear, int DayOfMonth) {
-        if (startClicked) {
-            startAt.setText(DayOfMonth + "/" + monthOfYear + "/" + year);
-        }
-        if (endClicked) {
-            end.setText(DayOfMonth + "/" + monthOfYear + "/" + year);
-        }
-    }
+    /**
+     * Touch listener to use for in-layout UI controls to delay hiding the
+     * system UI. This is to prevent the jarring behavior of controls going away
+     * while interacting with activity UI.
+     */
+
 
     private void toggle() {
         if (mVisible) {
@@ -109,6 +110,7 @@ public class AddCourse_Ac extends AppCompatActivity implements TimerPickerDialog
         if (actionBar != null) {
             actionBar.hide();
         }
+        mControlsView.setVisibility(View.GONE);
         mVisible = false;
 
         // Schedule a runnable to remove the status and navigation bar after a delay
@@ -154,6 +156,7 @@ public class AddCourse_Ac extends AppCompatActivity implements TimerPickerDialog
             if (actionBar != null) {
                 actionBar.show();
             }
+            mControlsView.setVisibility(View.VISIBLE);
         }
     };
 
@@ -174,4 +177,13 @@ public class AddCourse_Ac extends AppCompatActivity implements TimerPickerDialog
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onDatePicker(int year, int monthOfYear, int DayOfMonth) {
+        mDateOfBirth.setText(DayOfMonth + "/" + monthOfYear + "/" + year);
+    }
 }

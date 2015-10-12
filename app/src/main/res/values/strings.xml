@@ -27,11 +27,12 @@
     <string name="drawerClosed">CLOSED TO</string>
 
     <!--assign_leader_item_and_fragment-->
-    <string name="enterLeaderName">EnterLeaderEmail.</string>
-    <string name="deleteLeader">Delete Leader.</string>
-    <string name="leaderLogo">Insert Leader Icon.</string>
+    <string name="leader_mail">Leader email.</string>
+    <string name="leader_name">Leader name</string>
+    <string name="deleteLeader">Delete Leader</string>
+    <string name="leaderLogo">Insert Leader Icon</string>
     <string name="coursesLeader">Courses Leader</string>
-    <string name="add_leader">Add New Leader.</string>
+    <string name="add_leader">Add New Leader</string>
 
     <!-- report-->
     <string name="reportDetails">More Details...</string>
@@ -51,7 +52,6 @@
     <string name="student_details">Student Details</string>
     <string name="accept_decline">Accept  &amp; Decline</string>
     <string name="excel">Export To Excel</string>
-
 
 
     <!--settings-->
@@ -133,7 +133,7 @@
     <string name="title_activity_course_details">CourseDetails</string>
     <string name="title_activity_faq_">FAQ_Ac</string>
     <string name="title_activity_manage_course_">ManageCourse_Ac</string>
-    <string name="title_activity_add_course_">AddCourse_Ac</string>
+    <string name="title_activity_add_course_">Add Course</string>
     <string name="title_activity_accept_ndecline_">AcceptNDecline_Ac</string>
     <string name="title_activity_report_">Report_Ac</string>
     <string name="title_activity_terms_">Terms_Ac</string>
@@ -153,6 +153,25 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <!--strings related to sign up-->
+    <string name="title_activity_signup_">Signup_Ac</string>
+    <string name="dummy_content">Sign-up</string>
+    <string name="prompt_name">Name</string>
+    <string name="prompt_mobile">Mobile</string>
+    <string name="prompt_gender">Gender</string>
+    <string name="prompt_dof">DateOfBirth</string>
+    <string name="prompt_entity">Entity</string>
+    <string name="prompt_faculty">Faculty</string>
+    <string name="prompt_level">Level</string>
+    <!--strings related to add course-->
+    <string name="title_activity_add_course">Add Course</string>
+    <string name="prompt_course_name">Name</string>
+    <string name="prompt_course_category">Category</string>
+    <string name="prompt_course_description">Description</string>
+    <string name="prompt_course_leader_name">Leader name</string>
+    <string name="prompt_course_leader_email">Leader email</string>
+    <string name="prompt_course_starts">Starts at</string>
+    <string name="prompt_course_ends">Ends at</string>
 
 
 </resources>

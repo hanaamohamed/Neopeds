@@ -1,13 +1,16 @@
 package movieapplication.activity.com.designtesttwo.Fragments;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import movieapplication.activity.com.designtesttwo.Activities.LoginActivity;
 import movieapplication.activity.com.designtesttwo.R;
 
 
@@ -67,6 +70,14 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        Button login = (Button) view.findViewById(R.id.login);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), LoginActivity.class));
+
+            }
+        });
         return view;
     }
 
