@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical"
+    android:minHeight="?attr/actionBarSize">
+
+    <TextView
+        android:id="@+id/courseNameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/margin_activity_by_24dp"
+        android:layout_marginStart="@dimen/margin_activity_by_24dp"
+        android:text="@string/coursesLeader"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark" />
+</FrameLayout>

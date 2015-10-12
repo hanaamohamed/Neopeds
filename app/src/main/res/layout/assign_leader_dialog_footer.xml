@@ -1,0 +1,69 @@
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteColor"
+    android:weightSum="2">
+
+    &lt;!&ndash;<EditText
+        android:id="@+id/leaderET"
+        android:layout_width="@dimen/assign_leaderET_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_activity_by_24dp"
+        android:layout_marginTop="@dimen/assign_leaderET_margin"
+        android:layout_weight="1"
+        android:inputType="textEmailAddress"
+        android:text="@string/enterLeaderName"
+        android:textColor="@color/colorPrimary" />&ndash;&gt;
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/assign_leader_icon_margin"
+        android:layout_weight="1"
+        android:gravity="start">
+
+        <ImageButton
+            android:id="@+id/addLeaderBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginRight="@dimen/margin_activity_by_24dp"
+            android:layout_weight="1"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:contentDescription="@string/leaderLogo"
+            android:src="@mipmap/ic_group_add_black_36dp" />
+    </FrameLayout>
+
+
+</LinearLayout>-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/whiteColor"
+    android:minHeight="@dimen/leader_item_width"
+    android:weightSum="3">
+
+
+    <ImageButton
+        android:id="@+id/addLeaderBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_leader_icon"
+        android:layout_weight="1.25"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/ic_group_add_black_36dp" />
+
+
+    <TextView
+        android:id="@+id/leaderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/assign_leaderTV_margin"
+        android:layout_weight="1.75"
+        android:text="@string/add_leader"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimary" />
+
+ </LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/AssignLeader"
+            android:checked="false"
+            android:icon="@mipmap/ic_group_add_white_36dp"
+            android:title="@string/assignLeader">
+        </item>
+        <item android:id="@+id/addCourse"
+            android:checked="false"
+            android:icon="@mipmap/ic_add_circle_white_36dp"
+            android:title="@string/add_course">
+        </item>
+        <item android:id="@+id/wishList"
+            android:checked="false"
+            android:icon="@mipmap/ic_favorite_white_36dp"
+            android:title="@string/wishList">
+        </item>
+
+        <item android:id="@+id/manageCourse"
+            android:checked="false"
+            android:icon="@drawable/ic_perm_data_setting_white_36dp"
+            android:title="@string/manage_course">
+        </item>
+        <item
+            android:id="@+id/pushNot"
+            android:checked="false"
+            android:icon="@mipmap/ic_notifications_active_black_48dp"
+            android:title="@string/pushNot"></item>
+        <item android:id="@+id/aboutUs"
+            android:checked="false"
+            android:icon="@mipmap/ic_question_answer_black_48dp"
+            android:title="@string/aboutUs">
+        </item>
+        <item android:id="@+id/report"
+            android:checked="false"
+            android:icon="@mipmap/ic_bug_report_white_36dp"
+            android:title="@string/Report">
+        </item>
+        <item android:id="@+id/privacy"
+            android:checked="false"
+            android:icon="@mipmap/ic_https_black_48dp"
+            android:title="@string/privacy">
+        </item>
+        <item android:id="@+id/userterms"
+            android:checked="false"
+            android:icon="@mipmap/ic_assignment_white_36dp"
+            android:title="@string/userTerm">
+        </item>
+        <item android:id="@+id/settings"
+            android:checked="false"
+            android:icon="@mipmap/ic_settings_applications_white_36dp"
+            android:title="@string/settings">
+        </item>
+
+        <item android:id="@+id/Logout"
+            android:checked="false"
+            android:icon="@mipmap/ic_exit_to_app_white_36dp"
+            android:title="@string/logout">
+        </item>
+    </group>
+</menu>

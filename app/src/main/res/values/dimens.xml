@@ -1,0 +1,57 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="actionbar_height">56dp</dimen>
+    <dimen name="search_margin">16dp</dimen>
+    <dimen name="margin_nav_icon">16dp</dimen>
+
+
+    <!--in report -->
+    <dimen name="send_margin">30dp</dimen>
+    <dimen name="views_margin">16dp</dimen>
+    <dimen name="date_height">350dp</dimen>
+    <dimen name="margin_date">16dp</dimen>
+
+
+    <!--in navigation header-->
+    <dimen name="nav_header_height">100dp</dimen>
+
+    <!--in course_con item-->
+    <dimen name="margin_course_name_text">20dp</dimen>
+
+    <!-- in course_oth item-->
+    <dimen name="margin_rate">5dp</dimen>
+    <dimen name="margin_desc">10dp</dimen>
+
+
+    <!--in assign leader item-->
+    <dimen name="margin_delete_icon">10dp</dimen>
+    <dimen name="margin_activity_by_24dp">24dp</dimen>
+    <dimen name="margin_leader_icon">7dp</dimen>
+    <dimen name="assign_leaderTV_margin">9dp</dimen>
+    <dimen name="leader_item_width">50dp</dimen>
+
+    <!--user_term_item-->
+    <dimen name="user_term_padding">10dp</dimen>
+
+
+    <dimen name="submit_margin">16dp</dimen>
+
+
+
+    <!--in assign leader footer-->
+    <dimen name="assign_leaderET_width">200dp</dimen>
+    <dimen name="assign_leaderET_margin">5dp</dimen>
+    <dimen name="assign_leader_icon_margin">9dp</dimen>
+
+    <!--in assign leader header-->
+    <dimen name="assign_leaderTV_width">40dp</dimen>
+
+
+    <!-- test toolbar-->
+    <dimen name="first_keyline">16dp</dimen>
+    <dimen name="second_keyline">72dp</dimen>
+    <dimen name="toolbar_horizontal_padding">4dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

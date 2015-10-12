@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/whiteColor"
+    android:minHeight="@dimen/leader_item_width"
+    android:weightSum="3">
+
+
+    <ImageView
+        android:id="@+id/leaderAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_leader_icon"
+        android:layout_weight="1"
+        android:src="@mipmap/ic_mood_black_36dp" />
+
+
+    <TextView
+        android:id="@+id/leaderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/assign_leaderTV_margin"
+        android:layout_weight="1"
+        android:text="leader1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimary" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_activity_by_24dp"
+        android:layout_weight="1"
+        android:gravity="end">
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/margin_leader_icon"
+            android:contentDescription="@string/deleteLeader"
+            android:src="@mipmap/ic_delete_black_48dp" />
+    </FrameLayout>
+
+
+</LinearLayout>

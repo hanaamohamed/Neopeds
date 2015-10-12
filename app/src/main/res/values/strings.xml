@@ -1,0 +1,158 @@
+<resources>
+    <!---->
+    <string name="app_name">neopeds.</string>
+    <string name="action_settings">Settings.</string>
+    <string name="assignLeaderAc">Assign Leader.</string>
+    <string name="reportAc">Report.</string>
+    <string name="wishListAc">wishList.</string>
+    <string name="user_term_ac">UserTerm Statement.</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+
+    <!--nav_menu_item-->
+    <string name="assignLeader">Assign Leader</string>
+    <string name="add_course">Add Course</string>
+    <string name="wishList">WishList</string>
+    <string name="pushNot">Push Notification</string>
+    <string name="manage_course">Manage Course</string>
+    <string name="aboutUs">About Us</string>
+    <string name="Report">Report</string>
+    <string name="privacy">Privacy Statement</string>
+    <string name="userTerm">Terms &amp; Policies</string>
+    <string name="settings">Settings</string>
+    <string name="logout">LogOut</string>
+
+    <!--drawer_toggle-->
+    <string name="drawerOpened">OPENED</string>
+    <string name="drawerClosed">CLOSED TO</string>
+
+    <!--assign_leader_item_and_fragment-->
+    <string name="enterLeaderName">EnterLeaderEmail.</string>
+    <string name="deleteLeader">Delete Leader.</string>
+    <string name="leaderLogo">Insert Leader Icon.</string>
+    <string name="coursesLeader">Courses Leader</string>
+    <string name="add_leader">Add New Leader.</string>
+
+    <!-- report-->
+    <string name="reportDetails">More Details...</string>
+    <string name="sendReport">Send</string>
+    <string name="setDate">Set Date</string>
+    <!--courseDetails-->
+    <string name="about_course">About:</string>
+    <string name="syllabus">Syllabus:</string>
+    <string name="TA">Instructor:</string>
+
+    <!--section-->
+    <string name="section">Section</string>
+
+    <!-- manage courses-->
+    <string name="notifier">Notifier</string>
+    <string name="surveys">Surveys</string>
+    <string name="student_details">Student Details</string>
+    <string name="accept_decline">Accept  &amp; Decline</string>
+    <string name="excel">Export To Excel</string>
+
+
+
+    <!--settings-->
+    <string name="current_user_title">Current User</string>
+    <string name="current_user_Key">current_user</string>
+    <string-array name="pref_example_list_users">
+        <item>user 1</item>
+        <item>user 2</item>
+        <item>user 3</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_switch_users">Settings</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_profile_avtivity">profileAvtivity</string>
+    <string name="title_activity_assign_leader">AssignLeaderActivity</string>
+    <string name="title_activity_wish_list_">WishList_Ac</string>
+    <string name="title_activity_course_details">CourseDetails</string>
+    <string name="title_activity_faq_">FAQ_Ac</string>
+    <string name="title_activity_manage_course_">ManageCourse_Ac</string>
+    <string name="title_activity_add_course_">AddCourse_Ac</string>
+    <string name="title_activity_accept_ndecline_">AcceptNDecline_Ac</string>
+    <string name="title_activity_report_">Report_Ac</string>
+    <string name="title_activity_terms_">Terms_Ac</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in_g">Sign in with G</string>
+    <string name="action_sign_in_f">Sign in with F</string>
+    <string name="action_sign_up">Create new Account</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+</resources>
