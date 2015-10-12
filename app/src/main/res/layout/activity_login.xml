@@ -82,6 +82,29 @@
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
+                android:id="@+id/fullscreen_content_controls"
+                style="?metaButtonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@color/black_overlay"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent"
+                android:layout_marginTop="@dimen/margin_activity_by_24dp">
+
+
+                <Button
+                    android:id="@+id/sign_in"
+                    style="?metaButtonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/action_sign_in_" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/views_margin"
@@ -118,4 +141,6 @@
 
         </LinearLayout>
     </ScrollView>
+
+
 </LinearLayout>

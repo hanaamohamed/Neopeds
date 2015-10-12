@@ -76,7 +76,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 return false;
             }
         });
-
+        findViewById(R.id.sign_in).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                attemptLogin();
+            }
+        });
         CircleImageView  mSignInGmail = (CircleImageView) findViewById(R.id.email_sign_in_f);
         mSignInGmail.setOnClickListener(new OnClickListener() {
             @Override

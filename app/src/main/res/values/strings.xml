@@ -142,6 +142,7 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
+    <string name="action_sign_in_">Sign in </string>
     <string name="action_sign_in_g">Sign in with G</string>
     <string name="action_sign_in_f">Sign in with F</string>
     <string name="action_sign_up">Create new Account</string>
@@ -172,6 +173,7 @@
     <string name="prompt_course_leader_email">Leader email</string>
     <string name="prompt_course_starts">Starts at</string>
     <string name="prompt_course_ends">Ends at</string>
+    <string name="title_activity_profile_">Profile_Ac</string>
 
 
 </resources>
