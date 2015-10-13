@@ -8,10 +8,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 
+import movieapplication.activity.com.designtesttwo.Fragments.AcceptTermsDialog;
 import movieapplication.activity.com.designtesttwo.Fragments.TimerPickerDialog;
 import movieapplication.activity.com.designtesttwo.R;
 
@@ -19,7 +21,8 @@ import movieapplication.activity.com.designtesttwo.R;
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class Signup_Ac extends AppCompatActivity implements TimerPickerDialog.OnFragmentInteractionListener {
+public class Signup_Ac extends AppCompatActivity implements TimerPickerDialog.OnFragmentInteractionListener,
+        AcceptTermsDialog.OnFragmentInteractionListener, AcceptTermsDialog.DialogCallBack {
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -39,9 +42,10 @@ public class Signup_Ac extends AppCompatActivity implements TimerPickerDialog.On
     private static final int UI_ANIMATION_DELAY = 300;
 
     private View mContentView;
-    private View mControlsView;
+    //private View mControlsView;
     private boolean mVisible;
-    EditText mDateOfBirth;
+
+    EditText mNameView, mPasswordView, mDateOfBirth, mFacultyView, mEntityView, mLevelView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +54,7 @@ public class Signup_Ac extends AppCompatActivity implements TimerPickerDialog.On
         setContentView(R.layout.activity_signup_);
 
         mVisible = true;
-        mControlsView = findViewById(R.id.fullscreen_content_controls);
+        //mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
 
 
@@ -70,12 +74,15 @@ public class Signup_Ac extends AppCompatActivity implements TimerPickerDialog.On
             }
         });
 
-       findViewById(R.id.create).setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
+        findViewById(R.id.create).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AcceptTermsDialog acceptTermsDialog = new AcceptTermsDialog();
+                acceptTermsDialog.show(getFragmentManager(), "userTerms");
 
-           }
-       });
+
+            }
+        });
 
     }
 
@@ -110,7 +117,7 @@ public class Signup_Ac extends AppCompatActivity implements TimerPickerDialog.On
         if (actionBar != null) {
             actionBar.hide();
         }
-        mControlsView.setVisibility(View.GONE);
+//        mControlsView.setVisibility(View.GONE);
         mVisible = false;
 
         // Schedule a runnable to remove the status and navigation bar after a delay
@@ -156,7 +163,7 @@ public class Signup_Ac extends AppCompatActivity implements TimerPickerDialog.On
             if (actionBar != null) {
                 actionBar.show();
             }
-            mControlsView.setVisibility(View.VISIBLE);
+           // mControlsView.setVisibility(View.VISIBLE);
         }
     };
 
@@ -177,6 +184,60 @@ public class Signup_Ac extends AppCompatActivity implements TimerPickerDialog.On
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
 
+    private void attemptLogin() {
+        // Reset errors.
+        mNameView.setError(null);
+        mPasswordView.setError(null);
+        mDateOfBirth.setError(null);
+        mEntityView.setError(null);
+        mFacultyView.setError(null);
+        mLevelView.setError(null);
+
+        // Store values at the time of the login attempt.
+        String name = mNameView.getText().toString();
+        String password = mPasswordView.getText().toString();
+        String faculty = mPasswordView.getText().toString();
+        String level = mPasswordView.getText().toString();
+        String entity = mPasswordView.getText().toString();
+        String birthDate = mPasswordView.getText().toString();
+
+        boolean cancel = false;
+        View focusView = null;
+
+        // Check for a valid password, if the user entered one.
+        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+            mPasswordView.setError(getString(R.string.error_invalid_password));
+            focusView = mPasswordView;
+            cancel = true;
+        }
+
+        // Check for a valid email address.
+        if (TextUtils.isEmpty(name)) {
+            mNameView.setError(getString(R.string.error_field_required));
+            focusView = mNameView;
+            cancel = true;
+        }
+
+        if (cancel) {
+            // There was an error; don't attempt login and focus the first
+            // form field with an error.
+            focusView.requestFocus();
+        } else {
+            // Show a progress spinner, and kick off a background task to
+            // perform the user login attempt.
+        }
+    }
+
+    private boolean isEmailValid(String email) {
+        //TODO: Replace this with your own logic
+        return email.contains("@");
+    }
+
+    private boolean isPasswordValid(String password) {
+        //TODO: Replace this with your own logic
+        return password.length() > 4;
+    }
+
     @Override
     public void onFragmentInteraction(Uri uri) {
 
@@ -185,5 +246,15 @@ public class Signup_Ac extends AppCompatActivity implements TimerPickerDialog.On
     @Override
     public void onDatePicker(int year, int monthOfYear, int DayOfMonth) {
         mDateOfBirth.setText(DayOfMonth + "/" + monthOfYear + "/" + year);
+    }
+
+    @Override
+    public void Accepted() {
+
+    }
+
+    @Override
+    public void Decline() {
+
     }
 }

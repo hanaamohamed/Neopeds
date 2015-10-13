@@ -21,7 +21,6 @@ public class ManageCourse_Ac extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_white_36dp);
         CircleImageView acceptNDecline = (CircleImageView) findViewById(R.id.accept_decline);
         acceptNDecline.setOnClickListener(new View.OnClickListener() {

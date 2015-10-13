@@ -20,6 +20,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.MenuItem;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TabHost;
 
 
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements
     ViewPager pager;
     fragmentAdapter mFragmentAdapter;
     TabHost tabHost;
-
+    ImageView mAvatarView;
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +62,8 @@ public class MainActivity extends AppCompatActivity implements
         tabHost.setup();
 
 
-        String[] tabsTitles = {"home", "profile", "about"};
-        int[] icons = {R.drawable.ic_home_white_36dp, R.mipmap.ic_account_circle_white_36dp, R.drawable.ic_help_white_36dp};
+        String[] tabsTitles = {"home", "notification", "about"};
+        int[] icons = {R.drawable.ic_home_white_36dp, R.mipmap.ic_assignment_white_36dp, R.drawable.ic_help_white_36dp};
         for (int i = 0; i < tabsTitles.length; i++) {
             String tabName = tabsTitles[i];
             TabHost.TabSpec spec = tabHost.newTabSpec(tabName);
@@ -71,18 +72,7 @@ public class MainActivity extends AppCompatActivity implements
             tabHost.addTab(spec);
         }
 
-     /*   tabName = tabsTitles[1];
-        spec = tabHost.newTabSpec(tabName);
-        spec.setContent(new FakeContent());
-        spec.setIndicator(tabName, getResources().getDrawable(R.mipmap.ic_account_circle_white_36dp));
-        tabHost.addTab(spec);
 
-        tabName = tabsTitles[2];
-        spec = tabHost.newTabSpec(tabName);
-        spec.setContent(new FakeContent());
-        spec.setIndicator(tabName, getResources().getDrawable(R.mipmap.ic_help_outline_black_48dp));
-        tabHost.addTab(spec);
-*/
         tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
 
             @Override
@@ -117,6 +107,12 @@ public class MainActivity extends AppCompatActivity implements
             }
         });
 
+        mAvatarView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Profile_Ac.class));
+            }
+        });
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
@@ -225,6 +221,7 @@ public class MainActivity extends AppCompatActivity implements
         pager = (ViewPager) findViewById(R.id.pager);
         mFragmentAdapter = new fragmentAdapter(getSupportFragmentManager());
         tabHost = (TabHost) findViewById(android.R.id.tabhost);
+        mAvatarView = (ImageView) findViewById(R.id.acc_img);
 
     }
 

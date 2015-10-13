@@ -63,6 +63,12 @@
         <item>user 3</item>
     </string-array>
 
+    <!--related to profile-->
+    <string name="personal_data">Personal data</string>
+    <string name="scholarly_data">scholarly data</string>
+    <string name="following">following</string>
+    <string name="followers">followers</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -174,6 +180,14 @@
     <string name="prompt_course_starts">Starts at</string>
     <string name="prompt_course_ends">Ends at</string>
     <string name="title_activity_profile_">Profile_Ac</string>
+
+
+    <!-- strings related to accept terms dialog-->
+    <string name="accept_terms">Accept user terms</string>
+    <string name="accepted">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="title_dummyuserprofile_list">Dummy_User</string>
+    <string name="title_dummyuserprofile_detail">dummy_user_profile Detail</string>
 
 
 </resources>
