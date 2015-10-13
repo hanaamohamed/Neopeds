@@ -4,7 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/progressBar2"
+        android:layout_gravity="center_horizontal"
+        android:indeterminate="false" />
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/colorPrimary"
@@ -16,11 +25,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/views_margin"
             android:text="Title"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/abc_primary_text_material_dark"
             android:textStyle="bold" />
-    </LinearLayout>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="@dimen/views_margin"
+            android:progressDrawable="@drawable/rating_bar_style" />
+
+        <ImageButton
+            android:id="@+id/enroll"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_assignment_turned_in_white_36dp" />
+
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,8 +86,8 @@
                     android:layout_marginLeft="@dimen/views_margin"
                     android:text="@string/hello_blank_fragment"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/button_material_dark"
-                    android:textStyle="bold" />
+                    android:textColor="@color/black"
+                    android:textStyle="normal" />
             </LinearLayout>
 
 
@@ -82,8 +112,8 @@
                     android:layout_marginLeft="@dimen/views_margin"
                     android:text="@string/hello_blank_fragment"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/button_material_dark"
-                    android:textStyle="bold" />
+                    android:textColor="@color/black"
+                    android:textStyle="normal" />
             </LinearLayout>
 
         </LinearLayout>
@@ -93,12 +123,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/views_margin"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/light_blue"
+                android:background="@color/colorPrimary"
                 android:minWidth="130dp"
                 android:orientation="vertical">
 
@@ -110,7 +141,7 @@
                     android:layout_marginTop="@dimen/views_margin"
                     android:text="1M"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@color/button_material_dark"
+                    android:textColor="@color/whiteColor"
                     android:textStyle="bold" />
 
                 <TextView
@@ -120,7 +151,7 @@
                     android:layout_marginLeft="@dimen/views_margin"
                     android:text="3H"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@color/button_material_dark"
+                    android:textColor="@color/whiteColor"
                     android:textStyle="bold" />
 
                 <TextView
@@ -128,6 +159,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/views_margin"
+                    android:textColor="@color/whiteColor"
                     android:text="intermediate"
                     android:textStyle="bold" />
 
@@ -136,6 +168,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/views_margin"
+                    android:textColor="@color/whiteColor"
                     android:text="200$"
                     android:textStyle="bold" />
 
@@ -190,8 +223,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="@dimen/views_margin">
+        android:layout_marginLeft="@dimen/views_margin"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
@@ -206,6 +239,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/views_margin"
+            android:textColor="@color/black"
             android:text="@string/hello_blank_fragment" />
     </LinearLayout>
 

@@ -180,16 +180,7 @@
             android:layout_gravity="bottom|end"
             android:layout_marginRight="@dimen/views_margin"
             android:src="@mipmap/ic_group_add_white_48dp" />
-        <!-- <Button
-             android:id="@+id/create"
-             style="?metaButtonBarButtonStyle"
-             android:layout_width="0dp"
-             android:layout_height="wrap_content"
-             android:layout_weight="1"
-             android:background="@color/colorPrimary"
-             android:text="@string/action_sign_up" />-->
 
-        <!-- </LinearLayout>-->
     </FrameLayout>
 
 </android.support.design.widget.CoordinatorLayout>
